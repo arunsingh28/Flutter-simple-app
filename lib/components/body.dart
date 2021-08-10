@@ -1,6 +1,6 @@
 import 'package:auth_ui/components/background.dart';
+import 'package:auth_ui/components/rounded_btn.dart';
 import 'package:flutter/material.dart';
-// ignore: import_of_legacy_library_into_null_safe
 import 'package:flutter_svg/svg.dart';
 
 class Body extends StatelessWidget {
@@ -8,12 +8,24 @@ class Body extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return Background(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text("Simple App", style: TextStyle(fontWeight: FontWeight.bold)),
-          SvgPicture.asset("assets/icons/chat.svg")
+          SvgPicture.asset(
+            "assets/icons/chat.svg",
+            height: size.height * .45,
+          ),
+          RoundedButton(
+            title: "LOGIN",
+            press: () {},
+          ),
+          RoundedButton(
+            title: "SIGN UP",
+            press: () {},
+          ),
         ],
       ),
     );

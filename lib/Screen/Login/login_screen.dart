@@ -1,9 +1,9 @@
 import 'package:auth_ui/Screen/Login/background.dart';
+import 'package:auth_ui/components/rounded_btn.dart';
 import 'package:auth_ui/constant.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-
-import 'Rounded_input.dart';
+import 'body.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({Key key}) : super(key: key);
@@ -31,13 +31,29 @@ class LoginScreen extends StatelessWidget {
               RoundedInput(
                 hintText: "Your Email",
                 icon: Icons.person,
+                scure: false,
                 onChanged: (value) {},
               ),
               RoundedInput(
+                scure: true,
                 hintText: "Your Password",
                 icon: Icons.lock,
                 onChanged: (value) {},
               ),
+              RoundedButton(
+                title: "LOGIN",
+                textColor: Colors.white,
+                color: PrimaryColor,
+                press: () {},
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              Text(
+                "Don't have Account ? Sign Up",
+                style:
+                    TextStyle(color: PrimaryColor, fontWeight: FontWeight.bold),
+              )
             ],
           ),
         ),

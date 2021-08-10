@@ -27,7 +27,12 @@ class RoundedInput extends StatelessWidget {
               icon,
               color: PrimaryColor,
             ),
-            suffixIcon: scure ? Icon(Icons.remove_red_eye) : null,
+            suffixIcon: scure
+                ? Icon(
+                    Icons.visibility,
+                    color: PrimaryColor,
+                  )
+                : null,
             border: InputBorder.none),
       ),
     );

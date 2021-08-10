@@ -1,4 +1,5 @@
 import 'package:auth_ui/Screen/Login/background.dart';
+import 'package:auth_ui/Screen/Welcome/welcome_screen.dart';
 import 'package:auth_ui/components/rounded_btn.dart';
 import 'package:auth_ui/constant.dart';
 import 'package:flutter/material.dart';
@@ -49,10 +50,31 @@ class LoginScreen extends StatelessWidget {
               SizedBox(
                 height: 10,
               ),
-              Text(
-                "Don't have Account ? Sign Up",
-                style:
-                    TextStyle(color: PrimaryColor, fontWeight: FontWeight.bold),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    "Don't have an Account ? ",
+                    style: TextStyle(color: PrimaryColor),
+                  ),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) {
+                            return WelcomeScreen();
+                          },
+                        ),
+                      );
+                    },
+                    child: Text(
+                      "Sign Up",
+                      style: TextStyle(
+                          color: PrimaryColor, fontWeight: FontWeight.bold),
+                    ),
+                  )
+                ],
               )
             ],
           ),

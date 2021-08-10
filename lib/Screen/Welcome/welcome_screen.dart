@@ -1,4 +1,4 @@
-import 'package:auth_ui/components/body.dart';
+import 'package:auth_ui/Screen/Welcome/body.dart';
 import 'package:flutter/material.dart';
 
 class WelcomeScreen extends StatelessWidget {

@@ -10,6 +10,7 @@ class Body extends StatelessWidget {
     return Container(
       height: size.height,
       width: double.infinity,
+      // positioning any widget
       child: Stack(
         alignment: Alignment.center,
         children: <Widget>[
@@ -18,6 +19,13 @@ class Body extends StatelessWidget {
               left: 0,
               child: Image.asset(
                 "assets/images/main_top.png",
+                width: size.width * .3,
+              )),
+          Positioned(
+              bottom: 0,
+              left: 0,
+              child: Image.asset(
+                "assets/images/main_bottom.png",
                 width: size.width * .3,
               ))
         ],

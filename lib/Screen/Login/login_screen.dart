@@ -1,6 +1,5 @@
 import 'package:auth_ui/Screen/Login/background.dart';
 import 'package:auth_ui/Screen/Signup/Signup_screen.dart';
-import 'package:auth_ui/Screen/Welcome/welcome_screen.dart';
 import 'package:auth_ui/components/rounded_btn.dart';
 import 'package:auth_ui/constant.dart';
 import 'package:flutter/material.dart';

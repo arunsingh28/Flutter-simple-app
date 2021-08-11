@@ -1,3 +1,4 @@
+import 'package:auth_ui/API/api.dart';
 import 'package:auth_ui/Screen/Login/login_screen.dart';
 import 'package:auth_ui/Screen/Signup/Signup_screen.dart';
 import 'package:auth_ui/Screen/Welcome/background.dart';
@@ -47,7 +48,7 @@ class Body extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (context) {
-                      return SignUpScreen();
+                      return API();
                     },
                   ),
                 );

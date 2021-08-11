@@ -1,4 +1,3 @@
-import 'package:auth_ui/constant.dart';
 import 'package:flutter/material.dart';
 
 class RoundedButton extends StatelessWidget {

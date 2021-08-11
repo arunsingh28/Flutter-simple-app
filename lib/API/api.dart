@@ -10,15 +10,21 @@ class API extends StatefulWidget {
   _APIState createState() => _APIState();
 }
 
+class User {
+  final String name, email, username;
+
+  User(this.name, this.email, this.username);
+}
+
 class _APIState extends State<API> {
   getUserDate() async {
     var response =
         await http.get(Uri.parse('https://jsonplaceholder.typicode.com/users'));
-    var jsonDate = jsonDecode(response.body);
+    var jsonData = jsonDecode(response.body);
     List<User> users = [];
 
-    for (var u in jsonDate) {
-      User user = User(u['name'], u['email'], u['userName']);
+    for (var u in jsonData) {
+      User user = User(u['name'], u['email'], u['username']);
       users.add(user);
     }
     print(users.length);
@@ -29,7 +35,7 @@ class _APIState extends State<API> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('Api'),
+          title: Text('Users API'),
         ),
         body: Container(
           child: Card(
@@ -44,7 +50,9 @@ class _APIState extends State<API> {
                       itemBuilder: (context, index) {
                         return ListTile(
                           title: Text(snapshot.data[index].name),
-                          subtitle: Text(snapshot.data[index].email),
+                          subtitle: Text(snapshot.data[index].username),
+                          trailing: Text(snapshot.data[index].email),
+                          contentPadding: EdgeInsets.symmetric(horizontal: 10),
                         );
                       });
                 }
@@ -53,10 +61,4 @@ class _APIState extends State<API> {
           ),
         ));
   }
-}
-
-class User {
-  final String name, email, userName;
-
-  User(this.name, this.email, this.userName);
 }

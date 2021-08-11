@@ -1,4 +1,5 @@
 import 'package:auth_ui/Screen/Login/login_screen.dart';
+import 'package:auth_ui/Screen/Signup/Signup_screen.dart';
 import 'package:auth_ui/Screen/Welcome/background.dart';
 import 'package:auth_ui/components/rounded_btn.dart';
 import 'package:auth_ui/constant.dart';
@@ -41,7 +42,16 @@ class Body extends StatelessWidget {
             RoundedButton(
               title: "SIGN UP",
               color: PrimaryLightColor,
-              press: () {},
+              press: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return SignUpScreen();
+                    },
+                  ),
+                );
+              },
             ),
           ],
         ),

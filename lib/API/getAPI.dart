@@ -1,6 +1,4 @@
 import 'dart:convert';
-
-import 'package:auth_ui/Screen/Welcome/body.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
